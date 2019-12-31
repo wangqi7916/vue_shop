@@ -66,6 +66,8 @@ export default {
         if (valid) {
           login(this.loginForm).then(res => {
             if (res.status === 1) {
+              // 存储登陆用户信息
+              setStorage('user_key', JSON.stringify(res.data))
               this.$message.success(res.message)
               setStorage('token', res.token)
               this.$router.push('/home')

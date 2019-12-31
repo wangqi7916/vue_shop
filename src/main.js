@@ -6,7 +6,6 @@ import './assets/fonts/iconfont.css' // 字体样式
 import './plugins/element.js'
 
 Vue.config.productionTip = false
-
 new Vue({
   router,
   render: h => h(App)

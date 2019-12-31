@@ -18,9 +18,7 @@ service.interceptors.request.use(config => {
     lock: true,
     text: 'loading...'
   })
-  if (getStorage('token')) {
-    config.headers['Authorization'] = 'Bearer ' + getStorage('token')
-  }
+  config.headers['Authorization'] = 'Bearer ' + getStorage('token')
   return config
 })
 
